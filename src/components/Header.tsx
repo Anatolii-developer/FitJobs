@@ -28,18 +28,18 @@ const Header: React.FC<HeaderProps> = ({ onPostJob }) => {
   }, []);
 
 
-  const handleSignIn = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: "http://localhost:5173", // adjust for prod
-      },
-    });
+const handleSignIn = async () => {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: "https://fit-jobs-zeta.vercel.app", // ✅ use your deployed URL
+    },
+  });
 
-    if (error) {
-      console.error("Sign-in error:", error.message);
-    }
-  };
+  if (error) {
+    console.error("Sign-in error:", error.message);
+  }
+};
 
 
   const handleSignOut = async () => {
