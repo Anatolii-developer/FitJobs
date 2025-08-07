@@ -28,5 +28,5 @@ VITE_SUPABASE_ANON_KEY=your-anon.....
 ```bash
 npm run dev
 ```
-The website will be avaible locally using this link: 
+The website will be available locally using this link: 
 [http://localhost:5173]
